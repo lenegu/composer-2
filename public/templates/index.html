@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<body>
+	<table border="1" width="30%" cellpadding="5">
+	<input type="text" name= "bdate" class="bdate"> <br>
+	<button class="otpravka">Poisk</button>
+ <script>
+      $(document).ready (function () {
+            $("button.otpravka").on("click", function() {
+                var bdateValue =  $('input.bdate').val();
+                  if(bdateValue.length > 0) {
+                    window.location.href = "/getUsers/" + bdateValue;
+                  }
+                  
+              });
+          });
+    </script>
+</body>
+</html>
